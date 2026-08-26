@@ -1,0 +1,28 @@
+generated: '2026-08-26'
+method: probed
+source: https://www.primmunerx.com/
+description: >-
+  Results of probing the /.well-known/ discovery surface for Primmune Therapeutics. apis.yml carries
+  no apis[] entries and the company publishes no OpenAPI, so there is no baseURL or servers[] host to
+  probe; the only host under Primmune's control is its corporate WordPress site at www.primmunerx.com
+  (apex primmunerx.com serves the identical response). Every /.well-known/ path 404d. The WordPress
+  theme returns its own styled 404 page (HTTP 404, text/html) for most paths and nginx returns a bare
+  404 for /.well-known/security.txt. No document was served, so NO WellKnown or SecurityTxt pointer is
+  emitted in apis.yml — this file records a verified absence, not a presence.
+hosts:
+  - host: https://www.primmunerx.com
+    documents:
+      - path: /.well-known/security.txt
+        status: 404
+      - path: /.well-known/openid-configuration
+        status: 404
+      - path: /.well-known/oauth-authorization-server
+        status: 404
+      - path: /.well-known/api-catalog
+        status: 404
+      - path: /.well-known/ai-plugin.json
+        status: 404
+      - path: /.well-known/agent-card.json
+        status: 404
+      - path: /.well-known/agent.json
+        status: 404

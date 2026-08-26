@@ -1,7 +1,18 @@
 aid: primmune-therapeutics
 name: Primmune Therapeutics
-description: 'Primmune Therapeutics is a company surfaced via the API Evangelist harvest backlog (source:
-  secondary-market) and added to the network as a stub for full-pipeline profiling.'
+description: >-
+  Primmune Therapeutics is a clinical-stage biotechnology company headquartered in Carlsbad,
+  California, developing systemic cancer immunotherapies designed to activate the immune system in a
+  precise and controlled manner. Its lead program, PRTX007, is an orally administered, systemically
+  active small-molecule agonist of toll-like receptor 7 (TLR7) engineered to activate plasmacytoid
+  dendritic cells so they produce interferons, enhance antigen presentation, recruit natural killer
+  cells and support cytotoxic T cell expansion, while minimizing pro-inflammatory signaling. The
+  company was founded by researchers in oral small-molecule drug design and immune agonist
+  pharmacology and has completed Phase 1 evaluation in healthy volunteers. Primmune operates no
+  developer program and publishes no API product, SDK, or interface contract; its public web presence
+  is a WordPress marketing and investor-relations site, whose only machine-readable surfaces are the
+  Yoast-generated /llms.txt and WordPress's default /wp-json/ CMS endpoint.
+image: https://www.primmunerx.com/wp-content/uploads/2017/12/cropped-primmune-favicon-192x192.png
 url: https://raw.githubusercontent.com/api-evangelist/primmune-therapeutics/refs/heads/main/apis.yml
 x-type: company
 x-source: harvest:secondary-market
@@ -12,6 +23,13 @@ created: '2026-08-26'
 modified: '2026-08-26'
 tags:
 - Company
+- Biotechnology
+- Pharmaceuticals
+- Clinical Stage
+- Immunotherapy
+- Oncology
+- Life Sciences
+- Drug Discovery
 apis: []
 maintainers:
 - FN: Kin Lane
@@ -20,4 +38,42 @@ maintainers:
   email: info@apis.io
 common:
 - type: Website
-  url: https://www.nasdaqprivatemarket.com/
+  url: https://www.primmunerx.com/
+- type: Blog
+  url: https://www.primmunerx.com/news/
+- type: BlogRSS
+  url: https://www.primmunerx.com/feed/
+- type: PrivacyPolicy
+  url: https://www.primmunerx.com/privacy-policy/
+- type: LLMsTxt
+  url: llms/primmune-therapeutics-llms.txt
+- type: DomainSecurity
+  url: security/primmune-therapeutics-domain-security.yml
+
+x-enrichment:
+  date: '2026-08-26'
+  status: minimal
+  artifacts_added: 3
+  pass: local-v1
+x-coverage:
+  state: none
+  reason: not-a-software-company
+  detail: >-
+    Primmune is a clinical-stage drug developer whose product is the oral TLR7 agonist PRTX007, not
+    software: its single public host www.primmunerx.com is a WordPress marketing and investor site
+    where /openapi.json, /swagger.json, /api-docs, /graphql, /mcp and every /.well-known/ path return
+    404, and the only machine-readable surfaces are a Yoast-generated /llms.txt listing team and
+    press-release pages and WordPress's stock /wp-json/ CMS endpoint, which is theme infrastructure
+    rather than an API the company publishes.
+  evidence:
+    - url: https://www.primmunerx.com/openapi.json
+      status: 404
+    - url: https://www.primmunerx.com/graphql
+      status: 404
+    - url: https://www.primmunerx.com/.well-known/agent-card.json
+      status: 404
+    - url: https://www.primmunerx.com/llms.txt
+      status: 200
+    - url: https://www.primmunerx.com/wp-json/
+      status: 200
+  checked: '2026-08-26'
