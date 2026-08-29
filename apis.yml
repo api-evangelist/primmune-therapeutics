@@ -12,6 +12,17 @@ description: >-
   developer program and publishes no API product, SDK, or interface contract; its public web presence
   is a WordPress marketing and investor-relations site, whose only machine-readable surfaces are the
   Yoast-generated /llms.txt and WordPress's default /wp-json/ CMS endpoint.
+deliveryModel:
+  model: unknown
+  open_source: false
+  commercial: false
+  callable_host: false
+  label: Delivery model not determined — needs a product licence on record
+  confidence: low
+  source:
+  - none
+  generated: '2026-08-28'
+  method: derived
 image: https://www.primmunerx.com/wp-content/uploads/2017/12/cropped-primmune-favicon-192x192.png
 url: https://raw.githubusercontent.com/api-evangelist/primmune-therapeutics/refs/heads/main/apis.yml
 x-type: company
